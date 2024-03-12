@@ -1,7 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-const cardRoutes = require('./CardRoutes'); // Import the routes
+const cardRoutes = require('./routes/CardRoutes');
 require('dotenv').config();
 
 const app = express();
@@ -17,7 +17,7 @@ mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTop
     .catch(err => console.error('Could not connect to MongoDB', err));
 
 // Use routes
-app.use('/', cardRoutes); // Use the card routes with the router
+app.use('/', cardRoutes);
 
 // Start server
 app.listen(PORT, () => {
