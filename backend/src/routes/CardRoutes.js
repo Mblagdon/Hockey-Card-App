@@ -1,21 +1,22 @@
 const express = require('express');
 const router = express.Router(); // Create a router object
-const Card = require('./models/Card'); // Import the Card model
+const Card = require('../models/Card'); // Import the Card model
 
 // Fetch all cards
 router.get('/cards', async (req, res) => {
-    const { year, collection } = req.query;
-    let filter = {};
-    if (year) filter.year = year;
-    if (collection) filter.collection = collection;
-  
-    try {
-        const cards = await Card.find(filter).sort({ year: 1 });
-        res.json(cards);
-    } catch (err) {
-        res.status(500).json({ message: err.message });
-    }
+  const { collection, year } = req.query;
+  let query = {};
+  if (collection) query.collection = collection;
+  if (year) query.year = year;
+
+  try {
+    const cards = await Card.find(query);
+    res.json(cards);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
 });
+
 
 // Create a new card
 router.post('/cards', async (req, res) => {

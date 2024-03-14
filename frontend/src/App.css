@@ -36,3 +36,91 @@
     transform: rotate(360deg);
   }
 }
+
+
+body {
+  background-color: black;
+  color: white;
+}
+
+a, .navbar-brand, .nav-link {
+  color: white;
+}
+
+/* Since react-bootstrap uses its own styling for nav-links, you might need to override it */
+.navbar-light .navbar-nav .nav-link {
+  color: white;
+}
+
+/* Make sure links are also white when hovering */
+a:hover, .navbar-brand:hover, .nav-link:hover {
+  color: #ccc; /* or any other color you prefer for hover state */
+}
+
+.nav-link {
+  color: black !important; /* Force black color */
+  text-decoration: none; /* Remove underline */
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  text-decoration: none; /* Remove underline on hover/focus */
+}
+
+/* Style for the active nav link */
+.active-nav-link {
+  color: green !important; /* Green color for the active page */
+  text-decoration: underline !important; /* Underline for the active page */
+}
+
+.collection-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.collection-grid div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.collection-grid img {
+  width: 350px; /* Make the image fill the container */
+  height: 300px; /* Fixed height for all images */
+  object-fit: cover; /* Ensures the aspect ratio is preserved while covering the area */
+}
+
+@media (max-width: 768px) {
+  .collection-grid {
+    grid-template-columns: repeat(2, 1fr); /* Adjust to 2 columns on smaller screens */
+  }
+}
+
+.year-selector {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+.year-item {
+  cursor: pointer;
+  text-align: center;
+}
+
+.year-image {
+  width: 100%; /* Adjust as needed */
+  max-width: 150px; /* Adjust as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 10px; /* Space between image and button */
+}
+
+.year-button {
+  display: block;
+  width: 100%;
+  padding: 5px 10px;
+  /* Add any additional button styling */
+}
