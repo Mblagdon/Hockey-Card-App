@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 const collections = [
   { name: 'MVP', image: '/collections/mvp/mvp.png' },
   { name: 'O-Pee-Chee', image: '/collections/opeechee/opeechee.png' },
-  { name: 'O-Pee-Chee Platinum', image: '/collections/opeecheeplat/plat.png' },
+  { name: 'O-Pee-Chee Platinum', image: '/collections/opeecheeplatinum/platinum.png' },
   { name: 'Artifacts', image: '/collections/artifacts/artifacts.png' },
   { name: 'Series 1', image: '/collections/series1/ups1.png' },
   { name: 'Series 2', image: '/collections/series2/ups2.png' },
@@ -15,10 +15,9 @@ const collections = [
   { name: 'SP Game Used', image: '/collections/spgu/spgu.png' },
   { name: 'SPX', image: '/collections/spx/spx.png' },
   { name: 'Ice', image: '/collections/ice/ice.png' },
-  { name: 'SP Authentic', image: '/collections/spauth/spauth.png' },
-  { name: 'Ultimate', image: '/collections/ultimate/ult.png' },
+  { name: 'SP Authentic', image: '/collections/spauth/spauth.png' },  
   { name: 'Premier', image: '/collections/premier/prem.png' },
-  { name: 'The Cup', image: '/collections/thecup/cup.png' },
+  
 ];
 
 const Home = () => {

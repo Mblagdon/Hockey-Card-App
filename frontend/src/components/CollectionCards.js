@@ -21,7 +21,7 @@ const CollectionCards = () => {
 
   return (
     <div>
-      <h2>Cards for {collectionName} {year}</h2>
+      <h2>Cards For {collectionName.toUpperCase()} {year}</h2>
       {/* Display the cards here */}
     </div>
   );

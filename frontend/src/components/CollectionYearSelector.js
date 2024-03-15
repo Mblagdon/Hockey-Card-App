@@ -25,13 +25,16 @@ const CollectionYearSelector = () => {
   };
 
   return (
-    <div className="year-selector">
-      {years.map((year) => (
-        <div key={year} className="year-item" onClick={() => handleYearSelect(year)}>
-          <img src={getImagePath(year)} alt={year} className="year-image" />
-          <button className="year-button">{year}</button>
-        </div>
-      ))}
+    <div className="body-content">
+      <h2>{collectionName.toUpperCase()} Collection</h2>
+      <div className="year-selector">
+        {years.map((year) => (
+          <div key={year} className="year-item" onClick={() => handleYearSelect(year)}>            
+            <img src={getImagePath(year)} alt={year} className="year-image" />
+            <button className="year-button">{year}</button>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

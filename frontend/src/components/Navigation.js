@@ -8,7 +8,7 @@ const Navigation = () => {
     'MVP', 'O-Pee-Chee', 'O-Pee-Chee Platinum', 'Series 1',
     'Series 2', 'Artifacts', 'Black Diamond', 'Parkhurst',
     'Trilogy', 'Synergy', 'SP Game Used', 'SPX', 'Ice', 'SP Authentic',
-    'ULTIMATE', 'Premier', 'THE CUP'
+    'Premier'
   ];
 
   return (

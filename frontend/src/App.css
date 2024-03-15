@@ -98,29 +98,68 @@ a:hover, .navbar-brand:hover, .nav-link:hover {
   }
 }
 
+.body-content {
+  padding-top: 0px; /* Adjust the value based on the height of your navbar */
+}
+
 .year-selector {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 20px;
-  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* creates a responsive grid with items of at least 200px wide */
+  gap: 1rem; /* space between grid items */
+  justify-content: center;
+  align-items: center;
+  margin-top: 70px; /* This should be equal to or more than the height of your navbar */
 }
 
 .year-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   cursor: pointer;
-  text-align: center;
 }
 
 .year-image {
-  width: 100%; /* Adjust as needed */
-  max-width: 150px; /* Adjust as needed */
-  height: auto; /* Maintain aspect ratio */
-  margin-bottom: 10px; /* Space between image and button */
+  width: 95%; /* makes the image responsive within its container */
+  height: 450px; /* fixed height for all images */
+  object-fit: cover; /* ensures images cover the area uniformly */
+  border: 1px solid #ddd; /* optional: adds a border around the images */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* optional: adds a shadow for some depth */
+  margin-bottom: 0.5rem; /* space between the image and the button/text below it */
 }
 
 .year-button {
-  display: block;
-  width: 100%;
-  padding: 5px 10px;
-  /* Add any additional button styling */
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #1fdd06;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px rgb(24, 116, 24);
+  font-weight: bold;
+  text-decoration: underline;
+  margin-bottom: 2.5rem; /* space below the button */
+}
+
+.year-button:hover {
+  background-color: #028506;
+}
+
+.year-button:active {
+  background-color: #1fdd06;
+  box-shadow: 0 2px rgb(24, 116, 24);
+  transform: translateY(4px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .year-selector {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* adjusts grid for smaller screens */
+  }
+
+  .year-image {
+    height: 100px; /* smaller fixed height for images on smaller screens */
+  }
 }
